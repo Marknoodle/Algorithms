@@ -5,7 +5,7 @@
 startTime = [1,3,0,5,8,5]
 stopTime =  [2,4,6,7,9,9]
 
-## Active select starts here
+## Interval Select starts here
 # 2. Take the job that finishes the soonest relative to the current time
 def act_sel(startList, finishList):
     accepted = 0
@@ -16,7 +16,7 @@ def act_sel(startList, finishList):
             accepted = finishList[i] # store the current job's end in accepted
         i = i + 1
 
-## Active select ends here
+## Interval select ends here
 # From that spot it continues taking the next available job.
 # This does the job in O(n) time, because you list through your input once. 
 # This gives a total of O(N Log N) because we are bound by the sorting below.
